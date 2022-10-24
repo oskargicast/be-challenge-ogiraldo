@@ -183,7 +183,7 @@ class PlayerTestCase(CustomAPITestCase):
 
     def test_get_players_by_team(self):
         """
-        Tests players/
+        Tests players/?team={}
         """
         # Get players. Team 1.
         self.url = reverse('players-list')
