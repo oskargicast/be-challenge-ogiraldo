@@ -7,19 +7,20 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
 
 ## TODO List
 
-- [x] Setup base project.
+- [x] 1. Setup base project.
     - [x] Docker config files.
     - [x] Django DB settings.
-- [ ] Create models.
-- [ ] Expose models via admin.
-- [ ] Create import action.
+- [x] 2. Create football-data API client.
+- [ ] 3. Create models.
+- [ ] 4. Expose models via admin.
+- [ ] 5. Create import action.
     - [ ] Create tests.
-- [ ] Create API resources to retrieve data.
+- [ ] 6. Create API resources to retrieve data.
     - [ ] Players.
     - [ ] Team.
     - [ ] Players of a team.
-- [ ] Create tests for the endpoints of the last point.
-- [ ] Make async import actions.
+- [ ] 7. Create tests for the endpoints of the last point.
+- [ ] 8. Make async import actions.
     - [ ] Add redis and celery to our stack.
 
 ## Prerequisites
