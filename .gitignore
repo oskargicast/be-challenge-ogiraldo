@@ -105,7 +105,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -139,7 +138,7 @@ cython_debug/
 
 .vscode
 
-# django migrations 
+# django migrations
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py

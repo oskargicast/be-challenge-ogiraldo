@@ -1,0 +1,15 @@
+name: Actions Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose up -d
+      - name: Makemigrations
+        run: docker compose run --rm app python manage.py makemigrations
+      - name: Migrate
+        run: docker compose run --rm app python manage.py migrate
+      - name: Test
+        run: docker-compose run --rm app python manage.py test
