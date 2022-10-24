@@ -1,5 +1,7 @@
 # Santex Challenge
 
+![workflow](https://github.com/oskargicast/be-challenge-ogiraldo/actions/workflows/main.yaml/badge.svg)
+
 I will be using Django + DRF because it is a small project without extreme constraints.
 We also are going to use PostgreSQL because it will be the most realistic solution for a production project.
 
