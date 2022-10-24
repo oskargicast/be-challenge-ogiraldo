@@ -36,6 +36,7 @@ class TeamAdmin(admin.ModelAdmin):
         'tla',
         'area',
         'coach',
+        'n_competitions',
     ]
     search_fields = [
         'id',
@@ -46,6 +47,9 @@ class TeamAdmin(admin.ModelAdmin):
     raw_id_fields = [
         'coach',
     ]
+
+    def n_competitions(self, obj):
+        return obj.competitions.all().count()
 
 
 class TeamInline(admin.TabularInline):
