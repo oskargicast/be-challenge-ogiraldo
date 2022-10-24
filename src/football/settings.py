@@ -39,6 +39,7 @@ if DEBUG:
 
 LOCAL_APPS = [
     'football',
+    'league',
 ]
 
 
@@ -142,3 +143,6 @@ REST_FRAMEWORK = {
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
     'PAGE_SIZE': DRF_PAGE_SIZE,
 }
+
+# Football-data.org API
+API_TOKEN = env.str('API_TOKEN')
