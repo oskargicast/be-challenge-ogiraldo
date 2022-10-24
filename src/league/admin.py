@@ -48,8 +48,16 @@ class TeamAdmin(admin.ModelAdmin):
     ]
 
 
+class TeamInline(admin.TabularInline):
+    model = Team
+    extra = 0
+
+
 @admin.register(Coach)
 class CoachAdmin(admin.ModelAdmin):
+    inlines = [
+        TeamInline,
+    ]
     list_display = [
         'id',
         'api_id',
