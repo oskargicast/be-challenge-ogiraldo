@@ -1,0 +1,7 @@
+-r base.txt
+PyHamcrest==2.0.3
+django-extensions==3.2.1
+ipdb==0.13.9
+ipython==7.31.0
+psycopg2-binary==2.9.4
+pytest==6.2.5

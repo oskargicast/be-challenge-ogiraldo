@@ -1,0 +1,8 @@
+Django==4.1.2
+Markdown==3.4.1
+dj-database-url==1.0.0
+django-filter==22.1
+django-model-utils==4.2.0
+djangorestframework==3.14.0
+environs==9.5.0
+requests==2.28.1
