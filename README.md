@@ -13,8 +13,8 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
 - [x] 2. Create football-data API client.
 - [x] 3. Create models.
 - [x] 4. Expose models via admin.
-- [ ] 5. Create import action.
-    - [ ] Create tests.
+- [x] 5. Create import action.
+    - [x] Create tests.
 - [ ] 6. Create API resources to retrieve data.
     - [ ] Players.
     - [ ] Team.
