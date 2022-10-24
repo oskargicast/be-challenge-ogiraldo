@@ -1,0 +1,806 @@
+{
+	"info": {
+		"_postman_id": "00b7969c-6def-4312-ad29-12b019b629a6",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1416598"
+	},
+	"item": [
+		{
+			"name": "players",
+			"item": [
+				{
+					"name": "players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/leagues/CL/players/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"leagues",
+								"CL",
+								"players",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "players",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/leagues/CL/players/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"leagues",
+										"CL",
+										"players",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:57:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2231"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1172,\n    \"next\": \"http://localhost:8000/api/v1/leagues/CL/players/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6390,\n            \"created\": \"2022-10-24T05:47:53.293594Z\",\n            \"modified\": \"2022-10-24T05:47:53.293594Z\",\n            \"api_id\": 57899,\n            \"name\": \"José Luis Oltra\",\n            \"birthday\": \"1969-03-24\",\n            \"nationality\": \"Spain\",\n            \"position\": null,\n            \"team\": 348\n        },\n        {\n            \"id\": 6389,\n            \"created\": \"2022-10-24T05:47:53.277811Z\",\n            \"modified\": \"2022-10-24T05:47:53.277811Z\",\n            \"api_id\": 79725,\n            \"name\": \"Osman Bukari\",\n            \"birthday\": \"1998-12-13\",\n            \"nationality\": \"Ghana\",\n            \"position\": \"Offence\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6388,\n            \"created\": \"2022-10-24T05:47:53.276859Z\",\n            \"modified\": \"2022-10-24T05:47:53.276859Z\",\n            \"api_id\": 67706,\n            \"name\": \"Aleksandar Pešić\",\n            \"birthday\": \"1992-05-21\",\n            \"nationality\": \"Serbia\",\n            \"position\": \"Offence\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6387,\n            \"created\": \"2022-10-24T05:47:53.276034Z\",\n            \"modified\": \"2022-10-24T05:47:53.276034Z\",\n            \"api_id\": 8711,\n            \"name\": \"Kalifa Coulibaly\",\n            \"birthday\": \"1991-08-21\",\n            \"nationality\": \"Mali\",\n            \"position\": \"Offence\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6386,\n            \"created\": \"2022-10-24T05:47:53.275311Z\",\n            \"modified\": \"2022-10-24T05:47:53.275311Z\",\n            \"api_id\": 188159,\n            \"name\": \"Srdjan Spiridonovic\",\n            \"birthday\": \"2023-06-30\",\n            \"nationality\": \"Austria\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6385,\n            \"created\": \"2022-10-24T05:47:53.274565Z\",\n            \"modified\": \"2022-10-24T05:47:53.274565Z\",\n            \"api_id\": 188155,\n            \"name\": \"Egor Prutsev\",\n            \"birthday\": \"2026-06-30\",\n            \"nationality\": \"Russia\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6384,\n            \"created\": \"2022-10-24T05:47:53.273836Z\",\n            \"modified\": \"2022-10-24T05:47:53.273836Z\",\n            \"api_id\": 188151,\n            \"name\": \"Slavoljub Srnic\",\n            \"birthday\": \"2023-06-30\",\n            \"nationality\": \"Serbia\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6383,\n            \"created\": \"2022-10-24T05:47:53.273105Z\",\n            \"modified\": \"2022-10-24T05:47:53.273105Z\",\n            \"api_id\": 188145,\n            \"name\": \"Stefan Mitrovic\",\n            \"birthday\": \"2026-06-30\",\n            \"nationality\": \"Serbia\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6382,\n            \"created\": \"2022-10-24T05:47:53.272380Z\",\n            \"modified\": \"2022-10-24T05:47:53.272380Z\",\n            \"api_id\": 188143,\n            \"name\": \"El Fardou Ben\",\n            \"birthday\": \"2023-06-30\",\n            \"nationality\": \"Comoros\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        },\n        {\n            \"id\": 6381,\n            \"created\": \"2022-10-24T05:47:53.271666Z\",\n            \"modified\": \"2022-10-24T05:47:53.271666Z\",\n            \"api_id\": 188137,\n            \"name\": \"Veljko Nikolic\",\n            \"birthday\": \"2023-06-30\",\n            \"nationality\": \"Serbia\",\n            \"position\": \"Midfield\",\n            \"team\": 340\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "players?team_name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/leagues/CL/players/?team_name=FC Barcelona",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"leagues",
+								"CL",
+								"players",
+								""
+							],
+							"query": [
+								{
+									"key": "team_name",
+									"value": "FC Barcelona"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "players?team_name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/leagues/CL/players/?team_name=FC Barcelona",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"leagues",
+										"CL",
+										"players",
+										""
+									],
+									"query": [
+										{
+											"key": "team_name",
+											"value": "FC Barcelona"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:57:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2235"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 23,\n    \"next\": \"http://localhost:8000/api/v1/leagues/CL/players/?page=2&team_name=FC+Barcelona\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 5459,\n            \"created\": \"2022-10-24T05:47:52.297830Z\",\n            \"modified\": \"2022-10-24T05:47:52.297830Z\",\n            \"api_id\": 133860,\n            \"name\": \"Pedri\",\n            \"birthday\": \"2002-11-25\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5458,\n            \"created\": \"2022-10-24T05:47:52.297023Z\",\n            \"modified\": \"2022-10-24T05:47:52.297023Z\",\n            \"api_id\": 128040,\n            \"name\": \"Ansu Fati\",\n            \"birthday\": \"2002-10-31\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5457,\n            \"created\": \"2022-10-24T05:47:52.296129Z\",\n            \"modified\": \"2022-10-24T05:47:52.296129Z\",\n            \"api_id\": 33154,\n            \"name\": \"Ferrán Torres\",\n            \"birthday\": \"2000-02-29\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5456,\n            \"created\": \"2022-10-24T05:47:52.295299Z\",\n            \"modified\": \"2022-10-24T05:47:52.295299Z\",\n            \"api_id\": 8472,\n            \"name\": \"Memphis Depay\",\n            \"birthday\": \"1994-02-13\",\n            \"nationality\": \"Netherlands\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5455,\n            \"created\": \"2022-10-24T05:47:52.294576Z\",\n            \"modified\": \"2022-10-24T05:47:52.294576Z\",\n            \"api_id\": 3373,\n            \"name\": \"Ousmane Dembélé\",\n            \"birthday\": \"1997-05-15\",\n            \"nationality\": \"France\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5454,\n            \"created\": \"2022-10-24T05:47:52.293896Z\",\n            \"modified\": \"2022-10-24T05:47:52.293896Z\",\n            \"api_id\": 371,\n            \"name\": \"Robert Lewandowski\",\n            \"birthday\": \"1988-08-21\",\n            \"nationality\": \"Poland\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5453,\n            \"created\": \"2022-10-24T05:47:52.293207Z\",\n            \"modified\": \"2022-10-24T05:47:52.293207Z\",\n            \"api_id\": 159520,\n            \"name\": \"Pablo Torre\",\n            \"birthday\": \"2003-04-03\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5452,\n            \"created\": \"2022-10-24T05:47:52.292396Z\",\n            \"modified\": \"2022-10-24T05:47:52.292396Z\",\n            \"api_id\": 10179,\n            \"name\": \"Busquets\",\n            \"birthday\": \"1988-07-16\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5451,\n            \"created\": \"2022-10-24T05:47:52.291671Z\",\n            \"modified\": \"2022-10-24T05:47:52.291671Z\",\n            \"api_id\": 7559,\n            \"name\": \"Frenkie de Jong\",\n            \"birthday\": \"1997-05-12\",\n            \"nationality\": \"Netherlands\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5450,\n            \"created\": \"2022-10-24T05:47:52.290893Z\",\n            \"modified\": \"2022-10-24T05:47:52.290893Z\",\n            \"api_id\": 1747,\n            \"name\": \"Franck Kessié\",\n            \"birthday\": \"1996-12-19\",\n            \"nationality\": \"Cote d'Ivoire\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "teams?name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/teams/?name=FC Barcelona",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "FC Barcelona"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams?name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/teams/?name=FC Barcelona",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teams",
+										""
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "FC Barcelona"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "319"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 284,\n            \"created\": \"2022-10-24T05:47:52.273110Z\",\n            \"modified\": \"2022-10-24T05:47:52.274113Z\",\n            \"api_id\": 81,\n            \"name\": \"FC Barcelona\",\n            \"short_name\": \"Barça\",\n            \"address\": \"Avenida Arístides Maillol s/n Barcelona 08028\",\n            \"tla\": \"FCB\",\n            \"area\": \"Spain\",\n            \"coach\": null,\n            \"competitions\": [\n                4,\n                2\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/teams",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/teams",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teams"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2670"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 144,\n    \"next\": \"http://localhost:8000/api/v1/teams/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 402,\n            \"created\": \"2022-10-24T05:53:23.936934Z\",\n            \"modified\": \"2022-10-24T05:53:23.936934Z\",\n            \"api_id\": 5911,\n            \"name\": \"AC Monza\",\n            \"short_name\": \"Monza\",\n            \"address\": \"Via Ragazzi del '99, 14 Monza 20900\",\n            \"tla\": \"MON\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 401,\n            \"created\": \"2022-10-24T05:53:23.916233Z\",\n            \"modified\": \"2022-10-24T05:53:23.916233Z\",\n            \"api_id\": 5890,\n            \"name\": \"US Lecce\",\n            \"short_name\": \"Lecce\",\n            \"address\": \"Via Templari 11 Lecce 73100\",\n            \"tla\": \"USL\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 400,\n            \"created\": \"2022-10-24T05:53:23.898093Z\",\n            \"modified\": \"2022-10-24T05:53:23.898093Z\",\n            \"api_id\": 586,\n            \"name\": \"Torino FC\",\n            \"short_name\": \"Torino\",\n            \"address\": \"Via Arcivescovado 1 Torino 10122\",\n            \"tla\": \"TOR\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 399,\n            \"created\": \"2022-10-24T05:53:23.876511Z\",\n            \"modified\": \"2022-10-24T05:53:23.876511Z\",\n            \"api_id\": 584,\n            \"name\": \"UC Sampdoria\",\n            \"short_name\": \"Sampdoria\",\n            \"address\": \"Piazza Borgo Pila, 39 Genova 16129\",\n            \"tla\": \"SAM\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 398,\n            \"created\": \"2022-10-24T05:53:23.857857Z\",\n            \"modified\": \"2022-10-24T05:53:23.857857Z\",\n            \"api_id\": 488,\n            \"name\": \"Spezia Calcio\",\n            \"short_name\": \"Spezia Calcio\",\n            \"address\": \"Via Dei Pioppi, ingresso 1 La Spezia 19123\",\n            \"tla\": \"SPE\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 397,\n            \"created\": \"2022-10-24T05:53:23.835943Z\",\n            \"modified\": \"2022-10-24T05:53:23.835943Z\",\n            \"api_id\": 471,\n            \"name\": \"US Sassuolo Calcio\",\n            \"short_name\": \"Sassuolo\",\n            \"address\": \"Piazza Risorgimento, 47 Sassuolo 41049\",\n            \"tla\": \"SAS\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 396,\n            \"created\": \"2022-10-24T05:53:23.813585Z\",\n            \"modified\": \"2022-10-24T05:53:23.813585Z\",\n            \"api_id\": 457,\n            \"name\": \"US Cremonese\",\n            \"short_name\": \"Cremonese\",\n            \"address\": \"Via Persico, 19 Cremona 26100\",\n            \"tla\": \"CRE\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 395,\n            \"created\": \"2022-10-24T05:53:23.789846Z\",\n            \"modified\": \"2022-10-24T05:53:23.789846Z\",\n            \"api_id\": 455,\n            \"name\": \"US Salernitana 1919\",\n            \"short_name\": \"Salernitana\",\n            \"address\": \"Via San Leonardo, 51 Salerno 84131\",\n            \"tla\": \"SAL\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 394,\n            \"created\": \"2022-10-24T05:53:23.768918Z\",\n            \"modified\": \"2022-10-24T05:53:23.768918Z\",\n            \"api_id\": 450,\n            \"name\": \"Hellas Verona FC\",\n            \"short_name\": \"Verona\",\n            \"address\": \"Via Evangelista Torricelli, 37 Verona 37136\",\n            \"tla\": \"HVE\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        },\n        {\n            \"id\": 393,\n            \"created\": \"2022-10-24T05:53:23.739973Z\",\n            \"modified\": \"2022-10-24T05:53:23.739973Z\",\n            \"api_id\": 445,\n            \"name\": \"Empoli FC\",\n            \"short_name\": \"Empoli\",\n            \"address\": \"Piazza Matteotti Empoli 50053\",\n            \"tla\": \"EMP\",\n            \"area\": \"Italy\",\n            \"coach\": null,\n            \"competitions\": [\n                7\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "teams/id/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/teams/284",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"284"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams/id/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/teams/284",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teams",
+										"284"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 284,\n    \"created\": \"2022-10-24T05:47:52.273110Z\",\n    \"modified\": \"2022-10-24T05:47:52.274113Z\",\n    \"api_id\": 81,\n    \"name\": \"FC Barcelona\",\n    \"short_name\": \"Barça\",\n    \"address\": \"Avenida Arístides Maillol s/n Barcelona 08028\",\n    \"tla\": \"FCB\",\n    \"area\": \"Spain\",\n    \"coach\": null,\n    \"competitions\": [\n        4,\n        2\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "teams/id/players/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/teams/284/players/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"284",
+								"players",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams/id/players/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/teams/284/players/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"teams",
+										"284",
+										"players",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4832"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5459,\n        \"created\": \"2022-10-24T05:47:52.297830Z\",\n        \"modified\": \"2022-10-24T05:47:52.297830Z\",\n        \"api_id\": 133860,\n        \"name\": \"Pedri\",\n        \"birthday\": \"2002-11-25\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5458,\n        \"created\": \"2022-10-24T05:47:52.297023Z\",\n        \"modified\": \"2022-10-24T05:47:52.297023Z\",\n        \"api_id\": 128040,\n        \"name\": \"Ansu Fati\",\n        \"birthday\": \"2002-10-31\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5457,\n        \"created\": \"2022-10-24T05:47:52.296129Z\",\n        \"modified\": \"2022-10-24T05:47:52.296129Z\",\n        \"api_id\": 33154,\n        \"name\": \"Ferrán Torres\",\n        \"birthday\": \"2000-02-29\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5456,\n        \"created\": \"2022-10-24T05:47:52.295299Z\",\n        \"modified\": \"2022-10-24T05:47:52.295299Z\",\n        \"api_id\": 8472,\n        \"name\": \"Memphis Depay\",\n        \"birthday\": \"1994-02-13\",\n        \"nationality\": \"Netherlands\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5455,\n        \"created\": \"2022-10-24T05:47:52.294576Z\",\n        \"modified\": \"2022-10-24T05:47:52.294576Z\",\n        \"api_id\": 3373,\n        \"name\": \"Ousmane Dembélé\",\n        \"birthday\": \"1997-05-15\",\n        \"nationality\": \"France\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5454,\n        \"created\": \"2022-10-24T05:47:52.293896Z\",\n        \"modified\": \"2022-10-24T05:47:52.293896Z\",\n        \"api_id\": 371,\n        \"name\": \"Robert Lewandowski\",\n        \"birthday\": \"1988-08-21\",\n        \"nationality\": \"Poland\",\n        \"position\": \"Offence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5453,\n        \"created\": \"2022-10-24T05:47:52.293207Z\",\n        \"modified\": \"2022-10-24T05:47:52.293207Z\",\n        \"api_id\": 159520,\n        \"name\": \"Pablo Torre\",\n        \"birthday\": \"2003-04-03\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Midfield\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5452,\n        \"created\": \"2022-10-24T05:47:52.292396Z\",\n        \"modified\": \"2022-10-24T05:47:52.292396Z\",\n        \"api_id\": 10179,\n        \"name\": \"Busquets\",\n        \"birthday\": \"1988-07-16\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Midfield\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5451,\n        \"created\": \"2022-10-24T05:47:52.291671Z\",\n        \"modified\": \"2022-10-24T05:47:52.291671Z\",\n        \"api_id\": 7559,\n        \"name\": \"Frenkie de Jong\",\n        \"birthday\": \"1997-05-12\",\n        \"nationality\": \"Netherlands\",\n        \"position\": \"Midfield\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5450,\n        \"created\": \"2022-10-24T05:47:52.290893Z\",\n        \"modified\": \"2022-10-24T05:47:52.290893Z\",\n        \"api_id\": 1747,\n        \"name\": \"Franck Kessié\",\n        \"birthday\": \"1996-12-19\",\n        \"nationality\": \"Cote d'Ivoire\",\n        \"position\": \"Midfield\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5449,\n        \"created\": \"2022-10-24T05:47:52.289899Z\",\n        \"modified\": \"2022-10-24T05:47:52.289899Z\",\n        \"api_id\": 101345,\n        \"name\": \"Eric García\",\n        \"birthday\": \"2001-01-09\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5448,\n        \"created\": \"2022-10-24T05:47:52.288945Z\",\n        \"modified\": \"2022-10-24T05:47:52.288945Z\",\n        \"api_id\": 37428,\n        \"name\": \"Raphinha\",\n        \"birthday\": \"1996-12-14\",\n        \"nationality\": \"Brazil\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5447,\n        \"created\": \"2022-10-24T05:47:52.287690Z\",\n        \"modified\": \"2022-10-24T05:47:52.287690Z\",\n        \"api_id\": 28292,\n        \"name\": \"Ronald Araújo\",\n        \"birthday\": \"1999-03-07\",\n        \"nationality\": \"Uruguay\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5446,\n        \"created\": \"2022-10-24T05:47:52.281267Z\",\n        \"modified\": \"2022-10-24T05:47:52.281267Z\",\n        \"api_id\": 15865,\n        \"name\": \"Sergi Roberto\",\n        \"birthday\": \"1992-02-07\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5445,\n        \"created\": \"2022-10-24T05:47:52.280508Z\",\n        \"modified\": \"2022-10-24T05:47:52.280508Z\",\n        \"api_id\": 8499,\n        \"name\": \"Jules Koundé\",\n        \"birthday\": \"1998-11-12\",\n        \"nationality\": \"France\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5444,\n        \"created\": \"2022-10-24T05:47:52.279771Z\",\n        \"modified\": \"2022-10-24T05:47:52.279771Z\",\n        \"api_id\": 7783,\n        \"name\": \"Héctor Bellerín\",\n        \"birthday\": \"1995-03-19\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5443,\n        \"created\": \"2022-10-24T05:47:52.279059Z\",\n        \"modified\": \"2022-10-24T05:47:52.279059Z\",\n        \"api_id\": 3455,\n        \"name\": \"Andreas Christensen\",\n        \"birthday\": \"1996-04-10\",\n        \"nationality\": \"Denmark\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5442,\n        \"created\": \"2022-10-24T05:47:52.278387Z\",\n        \"modified\": \"2022-10-24T05:47:52.278387Z\",\n        \"api_id\": 3195,\n        \"name\": \"Marcos Alonso\",\n        \"birthday\": \"1990-12-28\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5441,\n        \"created\": \"2022-10-24T05:47:52.277712Z\",\n        \"modified\": \"2022-10-24T05:47:52.277712Z\",\n        \"api_id\": 3193,\n        \"name\": \"Jordi Alba\",\n        \"birthday\": \"1989-03-21\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5440,\n        \"created\": \"2022-10-24T05:47:52.276982Z\",\n        \"modified\": \"2022-10-24T05:47:52.276982Z\",\n        \"api_id\": 3190,\n        \"name\": \"Piqué\",\n        \"birthday\": \"1987-02-02\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Defence\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5439,\n        \"created\": \"2022-10-24T05:47:52.276234Z\",\n        \"modified\": \"2022-10-24T05:47:52.276234Z\",\n        \"api_id\": 146023,\n        \"name\": \"Arnau Tenas\",\n        \"birthday\": \"2001-05-30\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Goalkeeper\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5438,\n        \"created\": \"2022-10-24T05:47:52.275540Z\",\n        \"modified\": \"2022-10-24T05:47:52.275540Z\",\n        \"api_id\": 98751,\n        \"name\": \"Iñaki\",\n        \"birthday\": \"1999-03-02\",\n        \"nationality\": \"Spain\",\n        \"position\": \"Goalkeeper\",\n        \"team\": 284\n    },\n    {\n        \"id\": 5437,\n        \"created\": \"2022-10-24T05:47:52.274785Z\",\n        \"modified\": \"2022-10-24T05:47:52.274785Z\",\n        \"api_id\": 3173,\n        \"name\": \"Marc-André ter Stegen\",\n        \"birthday\": \"1992-04-30\",\n        \"nationality\": \"Germany\",\n        \"position\": \"Goalkeeper\",\n        \"team\": 284\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "players of a team",
+			"item": [
+				{
+					"name": "teams/id/players/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/players/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams/id/players/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/players/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"players",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2228"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2816,\n    \"next\": \"http://localhost:8000/api/v1/players/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 7629,\n            \"created\": \"2022-10-24T05:53:23.961594Z\",\n            \"modified\": \"2022-10-24T05:53:23.961594Z\",\n            \"api_id\": 64228,\n            \"name\": \"Christian Gytkjær\",\n            \"birthday\": \"1990-05-06\",\n            \"nationality\": \"Denmark\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7628,\n            \"created\": \"2022-10-24T05:53:23.960892Z\",\n            \"modified\": \"2022-10-24T05:53:23.960892Z\",\n            \"api_id\": 42347,\n            \"name\": \"Patrick Ciurria\",\n            \"birthday\": \"1995-02-09\",\n            \"nationality\": \"Italy\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7627,\n            \"created\": \"2022-10-24T05:53:23.960206Z\",\n            \"modified\": \"2022-10-24T05:53:23.960206Z\",\n            \"api_id\": 24279,\n            \"name\": \"Mirko Marić\",\n            \"birthday\": \"1995-05-16\",\n            \"nationality\": \"Croatia\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7626,\n            \"created\": \"2022-10-24T05:53:23.959587Z\",\n            \"modified\": \"2022-10-24T05:53:23.959587Z\",\n            \"api_id\": 3040,\n            \"name\": \"Dany Mota Carvalho\",\n            \"birthday\": \"1998-05-02\",\n            \"nationality\": \"Portugal\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7625,\n            \"created\": \"2022-10-24T05:53:23.958927Z\",\n            \"modified\": \"2022-10-24T05:53:23.958927Z\",\n            \"api_id\": 2270,\n            \"name\": \"Gianluca Caprari\",\n            \"birthday\": \"1993-07-30\",\n            \"nationality\": \"Italy\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7624,\n            \"created\": \"2022-10-24T05:53:23.958238Z\",\n            \"modified\": \"2022-10-24T05:53:23.958238Z\",\n            \"api_id\": 1854,\n            \"name\": \"Andrea Petagna\",\n            \"birthday\": \"1995-06-30\",\n            \"nationality\": \"Italy\",\n            \"position\": \"Offence\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7623,\n            \"created\": \"2022-10-24T05:53:23.957552Z\",\n            \"modified\": \"2022-10-24T05:53:23.957552Z\",\n            \"api_id\": 156527,\n            \"name\": \"Warren Bondo\",\n            \"birthday\": \"2003-09-15\",\n            \"nationality\": \"France\",\n            \"position\": \"Midfield\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7622,\n            \"created\": \"2022-10-24T05:53:23.956928Z\",\n            \"modified\": \"2022-10-24T05:53:23.956928Z\",\n            \"api_id\": 111220,\n            \"name\": \"Nicolò Rovella\",\n            \"birthday\": \"2001-12-04\",\n            \"nationality\": \"Italy\",\n            \"position\": \"Midfield\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7621,\n            \"created\": \"2022-10-24T05:53:23.956282Z\",\n            \"modified\": \"2022-10-24T05:53:23.956282Z\",\n            \"api_id\": 40323,\n            \"name\": \"Filippo Ranocchia\",\n            \"birthday\": \"2001-05-14\",\n            \"nationality\": \"Italy\",\n            \"position\": \"Midfield\",\n            \"team\": 402\n        },\n        {\n            \"id\": 7620,\n            \"created\": \"2022-10-24T05:53:23.955551Z\",\n            \"modified\": \"2022-10-24T05:53:23.955551Z\",\n            \"api_id\": 2878,\n            \"name\": \"José Machín\",\n            \"birthday\": \"1996-08-14\",\n            \"nationality\": \"Equatorial Guinea\",\n            \"position\": \"Midfield\",\n            \"team\": 402\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "teams/id/players/?team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/players/?team=284",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								""
+							],
+							"query": [
+								{
+									"key": "team",
+									"value": "284"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "teams/id/players/?team",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/players/?team=284",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"players",
+										""
+									],
+									"query": [
+										{
+											"key": "team",
+											"value": "284"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 24 Oct 2022 08:58:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2210"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 23,\n    \"next\": \"http://localhost:8000/api/v1/players/?page=2&team=284\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 5459,\n            \"created\": \"2022-10-24T05:47:52.297830Z\",\n            \"modified\": \"2022-10-24T05:47:52.297830Z\",\n            \"api_id\": 133860,\n            \"name\": \"Pedri\",\n            \"birthday\": \"2002-11-25\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5458,\n            \"created\": \"2022-10-24T05:47:52.297023Z\",\n            \"modified\": \"2022-10-24T05:47:52.297023Z\",\n            \"api_id\": 128040,\n            \"name\": \"Ansu Fati\",\n            \"birthday\": \"2002-10-31\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5457,\n            \"created\": \"2022-10-24T05:47:52.296129Z\",\n            \"modified\": \"2022-10-24T05:47:52.296129Z\",\n            \"api_id\": 33154,\n            \"name\": \"Ferrán Torres\",\n            \"birthday\": \"2000-02-29\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5456,\n            \"created\": \"2022-10-24T05:47:52.295299Z\",\n            \"modified\": \"2022-10-24T05:47:52.295299Z\",\n            \"api_id\": 8472,\n            \"name\": \"Memphis Depay\",\n            \"birthday\": \"1994-02-13\",\n            \"nationality\": \"Netherlands\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5455,\n            \"created\": \"2022-10-24T05:47:52.294576Z\",\n            \"modified\": \"2022-10-24T05:47:52.294576Z\",\n            \"api_id\": 3373,\n            \"name\": \"Ousmane Dembélé\",\n            \"birthday\": \"1997-05-15\",\n            \"nationality\": \"France\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5454,\n            \"created\": \"2022-10-24T05:47:52.293896Z\",\n            \"modified\": \"2022-10-24T05:47:52.293896Z\",\n            \"api_id\": 371,\n            \"name\": \"Robert Lewandowski\",\n            \"birthday\": \"1988-08-21\",\n            \"nationality\": \"Poland\",\n            \"position\": \"Offence\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5453,\n            \"created\": \"2022-10-24T05:47:52.293207Z\",\n            \"modified\": \"2022-10-24T05:47:52.293207Z\",\n            \"api_id\": 159520,\n            \"name\": \"Pablo Torre\",\n            \"birthday\": \"2003-04-03\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5452,\n            \"created\": \"2022-10-24T05:47:52.292396Z\",\n            \"modified\": \"2022-10-24T05:47:52.292396Z\",\n            \"api_id\": 10179,\n            \"name\": \"Busquets\",\n            \"birthday\": \"1988-07-16\",\n            \"nationality\": \"Spain\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5451,\n            \"created\": \"2022-10-24T05:47:52.291671Z\",\n            \"modified\": \"2022-10-24T05:47:52.291671Z\",\n            \"api_id\": 7559,\n            \"name\": \"Frenkie de Jong\",\n            \"birthday\": \"1997-05-12\",\n            \"nationality\": \"Netherlands\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        },\n        {\n            \"id\": 5450,\n            \"created\": \"2022-10-24T05:47:52.290893Z\",\n            \"modified\": \"2022-10-24T05:47:52.290893Z\",\n            \"api_id\": 1747,\n            \"name\": \"Franck Kessié\",\n            \"birthday\": \"1996-12-19\",\n            \"nationality\": \"Cote d'Ivoire\",\n            \"position\": \"Midfield\",\n            \"team\": 284\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/leagues/CL/import/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"leagues",
+						"CL",
+						"import",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
