@@ -64,7 +64,7 @@ class TeamManager(models.Manager):
             )
         json_teams = response.json().get('teams') or []
         # Inits counters.
-        team_counter = couch_counter = player_counter = 0
+        team_counter = coach_counter = player_counter = 0
         for json_team in json_teams:
             # Creates Team.
             team_data = TeamData(json_team)
@@ -104,7 +104,7 @@ class TeamManager(models.Manager):
                 )
                 if player_was_creater:
                     player_counter += 1
-        return team_counter, couch_counter, player_counter
+        return team_counter, coach_counter, player_counter
 
 
 class Team(TimeStampedModel):
@@ -187,6 +187,15 @@ class Coach(Person):
         ordering = ['-created']
 
 
+class PlayerQuerySet(models.QuerySet):
+
+    def by_league(self, league_code):
+        team_pks = Team.objects.filter(
+            competitions__code=league_code,
+        ).values_list('pk', flat=True)
+        return self.filter(team__pk__in=team_pks).distinct()
+
+
 class Player(Person):
     team = models.ForeignKey(
         Team,
@@ -198,7 +207,7 @@ class Player(Person):
         blank=True,
         null=True,
     )
-
+    objects = PlayerQuerySet.as_manager()
 
     def __str__(self):
         return f'{self.id}.{self.name} - {self.api_id}'
