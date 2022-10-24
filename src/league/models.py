@@ -63,15 +63,18 @@ class TeamManager(models.Manager):
                 f'Could not retrieve teams for league {league_code}'
             )
         json_teams = response.json().get('teams') or []
+        # Inits counters.
+        team_counter = couch_counter = player_counter = 0
         for json_team in json_teams:
             # Creates Team.
             team_data = TeamData(json_team)
             # Creates Coach.
+            coach_was_created = False
             coach = None
             coach_data = CoachData(team_data.get_coach())
             coach_obj = coach_data.simplify()
             if coach_obj.get('api_id'):
-                coach, _ = Coach.objects.get_or_create(
+                coach, coach_was_created = Coach.objects.get_or_create(
                     api_id=coach_obj.get('api_id'),
                     defaults=coach_obj,
                 )
@@ -79,12 +82,15 @@ class TeamManager(models.Manager):
             team_obj = team_data.simplify()
             if coach:
                 team_obj['coach'] = coach
+            if coach_was_created:
+                coach_counter += 1
             team, team_was_created = Team.objects.get_or_create(
                 api_id=team_obj.get('api_id'),
                 defaults=team_obj,
             )
+            team.competitions.add(competition)
             if team_was_created:
-                team.competitions.add(competition)
+                team_counter += 1
             # Creates Players.
             json_players = team_data.get_players()
             for json_player in json_players:
@@ -92,13 +98,13 @@ class TeamManager(models.Manager):
                 player_obj = player_data.simplify()
                 player_obj['team'] = team
                 player_api_id = player_obj.get('api_id')
-                try:
-                    Player.objects.get_or_create(
-                        api_id=player_api_id,
-                        defaults=player_obj,
-                    )
-                except Exception as error:
-                    import ipdb; ipdb.set_trace()
+                _, player_was_creater = Player.objects.get_or_create(
+                    api_id=player_api_id,
+                    defaults=player_obj,
+                )
+                if player_was_creater:
+                    player_counter += 1
+        return team_counter, couch_counter, player_counter
 
 
 class Team(TimeStampedModel):

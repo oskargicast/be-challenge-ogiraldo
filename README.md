@@ -19,9 +19,6 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
     - [ ] Players.
     - [ ] Team.
     - [ ] Players of a team.
-- [ ] 7. Create tests for the endpoints of the last point.
-- [ ] 8. Make async import actions.
-    - [ ] Add redis and celery to our stack.
 
 ## Running the project
 
