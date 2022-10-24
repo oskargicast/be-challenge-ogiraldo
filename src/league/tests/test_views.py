@@ -180,3 +180,22 @@ class PlayerTestCase(CustomAPITestCase):
         response = self.client.get(self.url)
         # One extra player for other team.
         assert_that(response.json()['count'], equal_to(5))
+
+    def test_get_players_by_team(self):
+        """
+        Tests players/
+        """
+        # Get players. Team 1.
+        self.url = reverse('players-list')
+        response = self.client.get(
+            f'{self.url}?team={self.team_1.pk}'
+        )
+        assert_that(response.status_code, equal_to(status.HTTP_200_OK))
+        assert_that(response.json()['count'], equal_to(3))
+        # Get coach if players does not exists. Team 3.
+        self.url = reverse('players-list')
+        response = self.client.get(
+            f'{self.url}?team={self.team_3.pk}'
+        )
+        assert_that(response.status_code, equal_to(status.HTTP_200_OK))
+        assert_that(response.json()['count'], equal_to(1))

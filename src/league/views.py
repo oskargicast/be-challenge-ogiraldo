@@ -2,7 +2,7 @@ from django.db.models import Q
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .models import Competition, Team, Player
+from .models import Competition, Team, Player, Coach
 from .serializers import (
     CompetitionSerializer,
     TeamSerializer,
@@ -85,3 +85,26 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
+
+    def list(self, request, *args, **kwargs):
+        team_id = self.request.GET.get('team')
+        qs = self.filter_queryset(self.get_queryset())
+        team_qs = Team.objects.filter(pk=team_id)
+        serializer_class = PlayerSerializer
+        if team_qs.exists():
+            team = team_qs.first()
+            qs = qs.filter(team=team)
+            if not qs.exists():
+                # If there is no player for this team.
+                # Then returns the coach.
+                coach = team.coach
+                if coach:
+                    qs = Coach.objects.filter(id=coach.id)
+                    serializer_class = CoachSerializer
+        # Paginates.
+        page = self.paginate_queryset(qs)
+        if page is not None:
+            serializer = serializer_class(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        serializer = serializer_class(qs, many=True)
+        return Response(serializer.data)
