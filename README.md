@@ -2,7 +2,8 @@
 
 I will be using Django + DRF because it is a small project without extreme constraints.
 We also are going to use PostgreSQL because it will be the most realistic solution for a production project.
-I would like to use async tasks in order to proccess the import tje league data.
+
+In the future, i would like to use async tasks in order to proccess the import tje league data.
 Perhaps Celery + Redis will be a quick and reliable way to do this.
 
 ## TODO List

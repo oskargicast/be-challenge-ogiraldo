@@ -1,0 +1,15 @@
+env:
+  - DOCKER_COMPOSE_VERSION=2.10.2
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose build
+  - docker compose run --rm app python manage.py makemigrations
+  - docker compose run --rm app python manage.py migrate
+
+jobs:
+  include:
+    - script: docker-compose run --rm app python manage.py test
