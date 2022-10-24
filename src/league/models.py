@@ -190,10 +190,12 @@ class Coach(Person):
 class PlayerQuerySet(models.QuerySet):
 
     def by_league(self, league_code):
-        team_pks = Team.objects.filter(
+        teams = Team.objects.filter(
             competitions__code=league_code,
-        ).values_list('pk', flat=True)
-        return self.filter(team__pk__in=team_pks).distinct()
+        )
+        return self.filter(
+            team__id__in=models.Subquery(teams.values('id'))
+        ).distinct()
 
 
 class Player(Person):
