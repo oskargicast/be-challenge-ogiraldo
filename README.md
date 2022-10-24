@@ -15,10 +15,10 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
 - [x] 4. Expose models via admin.
 - [x] 5. Create import action.
     - [x] Create tests.
-- [ ] 6. Create API resources to retrieve data.
-    - [ ] Players.
-    - [ ] Team.
-    - [ ] Players of a team.
+- [x] 6. Create API resources to retrieve data.
+    - [x] Players.
+    - [x] Team.
+    - [x] Players of a team.
 
 ## Running the project
 
@@ -33,19 +33,24 @@ docker compose run --rm app python manage.py makemigrations
 docker compose run --rm app python manage.py migrate
 ```
 
-
+Running a local web sercer.
 ```bash
 docker compose up
 // Or:
 docker compose run --rm --service-ports app python manage.py runserver 0.0.0.0:8000
 ```
 
+## Playground with postman
+
+In order to emulate the api, [download the postman collection](https://github.com/oskargicast/be-challenge-ogiraldo/blob/develop/resources/Challenge.postman_collection.json) and import in postman.
+
+![Postman collection overview](https://github.com/oskargicast/be-challenge-ogiraldo/blob/develop/resources/postman.png)
 
 # Running tests
 
 It tests api client handlers.
 ```bash
-docker-compose run --rm app python manage.py test league.tests.test_api_client
+docker-compose run --rm app python manage.py test
 ```
 
 ## Prerequisites
