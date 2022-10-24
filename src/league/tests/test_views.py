@@ -27,7 +27,7 @@ class LeagueTestCase(APITestCase):
         # Checks Teams exist with the league_code.
         competition = competition_qs.first()
         assert_that(
-            competition.teams.exists().exists(),
+            competition.teams.exists(),
             equal_to(True),
         )
         # Checks Coach exists with the league_code.
