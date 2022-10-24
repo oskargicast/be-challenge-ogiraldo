@@ -5,7 +5,7 @@
 I will be using Django + DRF because it is a small project without extreme constraints.
 We also are going to use PostgreSQL because it will be the most realistic solution for a production project.
 
-In the future, i would like to use async tasks in order to proccess the import tje league data.
+In the future, I would use async tasks in order to proccess the import tje league data.
 Perhaps Celery + Redis will be a quick and reliable way to do this.
 
 ## TODO List
@@ -36,11 +36,29 @@ docker compose run --rm app python manage.py makemigrations
 docker compose run --rm app python manage.py migrate
 ```
 
-Running a local web sercer.
+Running a local web server.
 ```bash
 docker compose up
 // Or:
 docker compose run --rm --service-ports app python manage.py runserver 0.0.0.0:8000
+```
+
+Creating a django user in order to access the admin.
+```bash
+docker compose run --rm app python manage.py creates_dummy_superuser
+```
+
+```bash
+====Superuser created====
+Username: admin
+Password: admin
+```
+
+Enter the [admin](http://localhost:8000/admin/login/?next=/admin/) with the username and password given in the step before.
+
+You can create a custom super user like this:
+```bash
+docker compose run --rm app python manage.py createsuperuser
 ```
 
 ## Playground with postman
@@ -51,7 +69,7 @@ In order to emulate the api, [download the postman collection](https://github.co
 
 # Running tests
 
-It tests api client handlers.
+It tests the api client connections and the api resources implemented.
 ```bash
 docker-compose run --rm app python manage.py test
 ```
