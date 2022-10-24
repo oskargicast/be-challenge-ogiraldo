@@ -11,8 +11,8 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
     - [x] Docker config files.
     - [x] Django DB settings.
 - [x] 2. Create football-data API client.
-- [ ] 3. Create models.
-- [ ] 4. Expose models via admin.
+- [x] 3. Create models.
+- [x] 4. Expose models via admin.
 - [ ] 5. Create import action.
     - [ ] Create tests.
 - [ ] 6. Create API resources to retrieve data.
@@ -22,6 +22,34 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
 - [ ] 7. Create tests for the endpoints of the last point.
 - [ ] 8. Make async import actions.
     - [ ] Add redis and celery to our stack.
+
+## Running the project
+
+Building the image.
+```bash
+docker compose build
+```
+
+Running the migrations.
+```bash
+docker compose run --rm app python manage.py makemigrations
+docker compose run --rm app python manage.py migrate
+```
+
+
+```bash
+docker compose up
+// Or:
+docker compose run --rm --service-ports app python manage.py runserver 0.0.0.0:8000
+```
+
+
+# Running tests
+
+It tests api client handlers.
+```bash
+docker-compose run --rm app python manage.py test league.tests.test_api_client
+```
 
 ## Prerequisites
 
