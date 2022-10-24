@@ -10,7 +10,7 @@ Perhaps Celery + Redis will be a quick and reliable way to do this.
 - [x] 1. Setup base project.
     - [x] Docker config files.
     - [x] Django DB settings.
-- [ ] 2. Create football-data API client.
+- [x] 2. Create football-data API client.
 - [ ] 3. Create models.
 - [ ] 4. Expose models via admin.
 - [ ] 5. Create import action.
