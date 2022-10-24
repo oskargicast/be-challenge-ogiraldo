@@ -1,5 +1,13 @@
+from django.conf import settings
 from django.db import models
 from model_utils.models import TimeStampedModel
+from league.api_client import (
+    LeagueAPIClient,
+    CompetitionData,
+    TeamData,
+    CoachData,
+    PlayerData,
+)
 
 
 class Competition(TimeStampedModel):
@@ -21,6 +29,18 @@ class Competition(TimeStampedModel):
 
     class Meta:
         ordering = ['-created']
+
+    @classmethod
+    def retrieve_and_create(cls, league_code):
+        client = LeagueAPIClient(
+            api_token=settings.API_TOKEN,
+            league_code=league_code,
+        )
+        response = client.get_competitions()
+        if response.status_code != 200:
+            raise Exception(f'Could not retrieve league {league_code}')
+        data = CompetitionData(response.json()).simplify()
+        return Competition.objects.create(**data)
 
 
 class Team(TimeStampedModel):
@@ -49,12 +69,14 @@ class Team(TimeStampedModel):
     )
     competitions = models.ManyToManyField(
         Competition,
-        related_name='competitions',
+        related_name='teams',
     )
     coach = models.OneToOneField(
         'league.Coach',
         related_name='coach',
         on_delete=models.CASCADE,
+        blank=True,
+        null=True,
     )
 
     def __str__(self):
