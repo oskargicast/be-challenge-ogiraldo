@@ -32,7 +32,6 @@ docker compose build
 
 Running the migrations.
 ```bash
-docker compose run --rm app python manage.py makemigrations
 docker compose run --rm app python manage.py migrate
 ```
 
